@@ -44,7 +44,22 @@
     #titleholder{
         background-color: #29304b;
     }
-   
+    .finish{
+      border-radius: 5px;
+      text-align: center;
+      margin-top:5rem;
+      padding:3rem.3rem;
+      background-color: antiquewhite;
+      color:blueviolet;
+
+    }
+    .finish:hover{
+      background-color: gold;
+      color:blueviolet;
+    }
+   #cal{
+    display:none;
+   }
 
 </style>
 <body>
@@ -55,8 +70,8 @@
     </header>
 
 
-
-    <div class="m-3">
+    <article class="all">
+    <article class="m-3">
         <div class="row g-3">
             <div class="col">
         <input type="text" class="form-control" placeholder="作品を入力">
@@ -70,30 +85,30 @@
 
         <div class="container my-5 " id="categolize">
             <div class="row ">
-              <div class="col border" id="japanese_movies">
+              <div class="col border" id="japanese_movie" onclick="japam()">
                 日本映画
               </div>
-              <div class="col border" id="abroad_movie">
+              <div class="col border" onclick="abroad()" id="abroad_movie">
                 海外映画
               </div>
-              <div class="col border " id="drama">
+              <div class="col border" onclick="drama()"id="drama">
                 ドラマ
               </div>
-              <div class="col border" id="anime">
+              <div class="col border" onclick="hangle()"id="anime">
                 韓国ドラマ
               </div>
-              <div class="col border" id="anime">
+              <div class="col border" onclick="anime()" id="anime">
                 アニメ
               </div>
-              <div class="col border" id="documentary">
+              <div class="col border" onclick="docu()" id="documentary">
                 ドキュメンタリー
               </div>
-              <div class="col border" id="holar">
+              <div class="col border" onclick="holar()" id="holar">
                 ホラー
               </div>
             </div>
           </div>
-    <div class="container">
+    <div class="container" id="contents">
       <div class="row">
         <div class="col border"><p>クレヨンしんちゃん</p>
           <p>残り10日</p>
@@ -162,9 +177,13 @@
         </div>
       </div>
     </div>
+    <div class="finish" id="finish" onclick="showCal()">選択終了</div>
+  </article >
+  <h3 id="cal"> カレンダーが完成しました！　<a href="https://calendar.google.com/calendar/u/0?cid=N2RmZDYzYjNkNzlkNmQ3ZjIzN2I4MjFmYjIzODdkNjg5ZWJiZDAwMjIwNDZjZTkzYjkyMGY5ZGUxNTYwN2M2MUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">追加はここをクリック<a></h3>
 <footer class="fixed-bottom p-3">
     &copy; チーム5
 </footer>
+<script src="index.js"></script>
 
 </body>
 <!-- 配色
